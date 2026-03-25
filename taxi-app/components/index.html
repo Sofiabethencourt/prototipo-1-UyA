@@ -38,7 +38,11 @@
                     <div class="row g-3">
                         <div class="col-md-2 text-start">
                             <label for="origen">Origen</label>
-                            <input type="text" class="form-control" id="origen" placeholder="Aeropuerto">
+                            <select class="form-select" id="origen">
+                                <option selected disabled>Selecciona</option>
+                                <option value="norte">Aeropuerto Tenerife Norte</option>
+                                <option value="sur">Aeropuerto Tenerife Sur</option>
+                            </select>
                         </div>
                         <div class="col-md-2 text-start">
                             <label for="destino">Destino</label>
@@ -63,10 +67,6 @@
                 </form>
             </div>
         </div>
-        </div>
-
-
-        
     </body>
 
 </html>
