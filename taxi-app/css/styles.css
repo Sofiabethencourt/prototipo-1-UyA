@@ -1,0 +1,17 @@
+/*Imagen de fondo para el título y reserva*/
+.image-background {
+    background-image: url('../images/back_tittle.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    padding-top: 80px;
+    padding-left: 50px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.text_tittle {
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
