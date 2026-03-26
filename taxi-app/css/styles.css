@@ -131,3 +131,40 @@
     background-color: #f8f9fa; 
     color: #000; 
 }
+
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: rgb(255, 193, 7);
+  font-weight: bold;
+  font-size: 0.85rem;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.section-divider {
+  border: none;
+  border-top: 1.5px dashed #dee2e6;
+  margin: 2rem 0;
+}
+
+
+.card {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 0.3rem;
+border: 2px solid #dee2e6;
+border-radius: 10px;
+padding: 0.85rem 0.5rem;
+cursor: pointer;
+transition: border-color 0.18s, background-color 0.18s;
+text-align: center;
+height: 100%;
+user-select: none;
+}

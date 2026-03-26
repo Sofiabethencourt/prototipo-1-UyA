@@ -17,25 +17,207 @@
                     AeroTaxi Tenerife
                 </a>
 
-                <a href="?lang=es" id="btn-es" class="btn btn-outline-dark ms-2">ES</a>
-                <a href="?lang=en" id="btn-en" class="btn btn-outline-dark ms-1">EN</a>
+                <a href="./booking.html" id="btn-es" class="btn btn-outline-dark ms-2">ES</a>
+                <a href="./booking_en.html" id="btn-en" class="btn btn-outline-dark ms-1">EN</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto"> <a class="nav-link active" aria-current="page" href="index.html" data-en="Home">Inicio</a>
-                        <a class="nav-link" href="./maps.html" data-en="Meeting Points">Puntos de encuentro</a>
-                        <a class="nav-link" href="./booking.html" data-en="Booking Form">Formulario de reserva</a>
-                        <a class="nav-link" href="./contact.html" data-en="Contact">Contacto</a>
+                    <div class="navbar-nav ms-auto"> <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        <a class="nav-link" href="./maps.html">Puntos de encuentro</a>
+                        <a class="nav-link" href="./booking.html">Formulario de reserva</a>
+                        <a class="nav-link" href="./contact.html">Contacto</a>
                     </div>
                 </div>
             </div>
         </nav>
 
-    
-        <script src="../js/languajes.js"></script>
-        
+        <!--Formulario de reserva-->
+        <form id="bookingForm" class="container my-5" novalidate>
+ 
+            <h1 class="mb-1">Formulario de Reserva</h1>
+            <p class="text-muted mb-4">
+                Rellena los datos a continuación y confirmaremos tu traslado lo antes posible.
+            </p>
+ 
+            <!-- Datos del viaje ── -->
+            <p>
+                <span class="step-badge">1</span>
+                <span>Detalles del viaje</span>
+            </p>
+ 
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Aeropuerto de origen</label>
+                    <select class="form-select" id="origen" required>
+                        <option value="" selected disabled>Selecciona un aeropuerto</option>
+                        <option value="norte">Aeropuerto Tenerife Norte (TFN)</option>
+                        <option value="sur">Aeropuerto Tenerife Sur (TFS)</option>
+                    </select>
+                    <div class="invalid-feedback">Por favor, selecciona un aeropuerto.</div>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Destino (ciudad, hotel o dirección)</label>
+                    <input type="text" class="form-control" id="destino" placeholder="Ej: Hotel Bahía del Duque, Adeje" required>
+                    <div class="invalid-feedback">Por favor, indica tu destino.</div>
+                </div>
+            </div>
+ 
+            <div class="row g-3 mb-4">
+                <div class="col-md-4">
+                    <label class="form-label">Fecha</label>
+                    <input type="date" class="form-control" id="fecha" required>
+                    <div class="invalid-feedback">Por favor, selecciona una fecha.</div>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Hora de llegada</label>
+                    <input type="time" class="form-control" id="hora" required>
+                    <div class="invalid-feedback">Por favor, indica la hora de llegada.</div>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Número de pasajeros</label>
+                    <input type="number" class="form-control" id="personas" min="1" max="8" value="1" required>
+                    <div class="invalid-feedback">Máximo 8 pasajeros.</div>
+                </div>
+            </div>
+ 
+            <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label">Número de vuelo (opcional)</label>
+                    <input type="text" class="form-control" id="vuelo" placeholder="Ej: IB3456">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Equipaje (nº de maletas)</label>
+                    <input type="number" class="form-control" id="maletas" min="0" max="20" value="1">
+                </div>
+            </div>
+ 
+            <hr class="my-4">
+ 
+            <!-- ── SECCIÓN 2: Extras ── -->
+            <p>
+                <span class="step-badge">2</span>
+                <span>Extras opcionales</span>
+            </p>
+            <p class="text-muted small mb-3">
+                Selecciona los extras que harán tu viaje aún más cómodo.
+            </p>
+ 
+            <div class="row g-3 mb-4" id="extras-container">
+                <div class="col-6 col-md-3">
+                    <label class="card d-block" id="lbl-bebe">
+                        <input type="radio" name="extra" id="extra-bebe" value="bebe">
+                        <span>🪑</span>
+                        <br>
+                        <span>Silla bebé</span>
+                    </label>
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="card d-block" id="lbl-nino">
+                        <input type="radio" name="extra" id="extra-nino" value="nino">
+                        <span>👦</span>
+                        <br>
+                        <span>Silla infantil</span>
+                    </label>
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="card d-block" id="lbl-mascota">
+                        <input type="radio" name="extra" id="extra-mascota" value="mascota">
+                        <span>🐾</span>
+                        <br>
+                        <span>Llevar mascota</span>
+                    </label>
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="card d-block" id="lbl-accesible">
+                        <input type="radio" name="extra" id="extra-accesible" value="accesible">
+                        <span>♿</span>
+                        <br>
+                        <span>Vehículo adaptado</span>
+                    </label>
+                </div>
+            </div>
+ 
+            <hr class="my-4">
+ 
+            <!-- ── SECCIÓN 3: Datos personales ── -->
+            <p>
+                <span class="step-badge">3</span>
+                <span>Datos personales</span>
+            </p>
+ 
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                    <div class="invalid-feedback">Por favor, introduce tu nombre.</div>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos" required>
+                    <div class="invalid-feedback">Por favor, introduce tus apellidos.</div>
+                </div>
+            </div>
+ 
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required>
+                    <div class="invalid-feedback">Por favor, introduce un email válido.</div>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" placeholder="+34 600 000 000" required>
+                    <div class="invalid-feedback">Por favor, introduce tu teléfono.</div>
+                </div>
+            </div>
+ 
+            <div class="mb-4">
+                <label class="form-label">Notas adicionales (opcional)</label>
+                <textarea class="form-control" id="notas" rows="2" placeholder="Ej: Llevo una silla de ruedas plegable..."></textarea>
+            </div>
+ 
+            <hr class="my-4">
+ 
+            <!-- ── SECCIÓN 4: Método de pago ── -->
+            <p>
+                <span class="step-badge">4</span>
+                <span>Método de pago</span>
+            </p>
+ 
+            <div class="row g-3 mb-4" id="pago-container">
+                <div class="col-6 col-md-3">
+                    <label class="card d-block" id="lbl-pago-tarjeta">
+                        <input type="radio" name="pago" value="tarjeta" id="pago-tarjeta" required>
+                        <span>💳</span>
+                        <span>Tarjeta</span>
+                    </label>
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="card d-block" id="lbl-pago-efectivo">
+                        <input type="radio" name="pago" value="efectivo" id="pago-efectivo">
+                        <span>💵</span>
+                        <span>Efectivo</span>
+                    </label>
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="card d-block" id="lbl-pago-bizum">
+                        <input type="radio" name="pago" value="bizum" id="pago-bizum">
+                        <span>📱</span>
+                        <span>Bizum</span>
+                    </label>
+                </div>
+                <div class="col-6 col-md-3">
+                    <label class="card d-block" id="lbl-pago-paypal">
+                        <input type="radio" name="pago" value="paypal" id="pago-paypal">
+                        <span>🅿️</span>
+                        <span>PayPal</span>
+                    </label>
+                </div>
+            </div>
+        </form>
+         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
