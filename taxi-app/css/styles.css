@@ -14,13 +14,14 @@
     text-shadow: 2px 2px 4px grey;
 }
 
+/* Reservas en página principal*/
 .card-reservas {
     position: absolute;
     top: 50%;
     left: 15%;
     width: 90%;
     max-width: 1000px;
-    border: 15px solid #ffc107;
+    border: 15px solid rgb(255, 193, 7);
 }
 
 .card-reservas label {
@@ -30,11 +31,47 @@
 
 /* Formulario de reservas */
 .container.my-5 {
-        background-color: #eeeff1;
+        background-color: white;
         padding: 40px;
         border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        box-shadow: 0 4px 15px black;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+}
+
+/* Maps */
+.map-container {
+    position: relative;
+    width: 100%;        
+    padding-bottom: 56.25%; /* proporción 16:9 */
+    overflow: hidden;
+    border-radius: 10px;  
+    box-shadow: 0 4px 10px darkgray; 
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 10px; 
+}
+
+.map-description {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: black;
+}
+
+.map-btn {
+    display: inline-block;
+    background-color: rgb(255, 193, 7); 
+    color: black;
+    font-weight: 600;
+    padding: 0.35rem 0.75rem;
+    border-radius: 5px;
+    text-decoration: none;
 }
