@@ -16,14 +16,17 @@
                     AeroTaxi Tenerife
                 </a>
 
+                <a href="?lang=es" id="btn-es" class="btn btn-outline-dark ms-2">ES</a>
+                <a href="?lang=en" id="btn-en" class="btn btn-outline-dark ms-1">EN</a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav ms-auto"> <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-                        <a class="nav-link" href="#">Puntos de encuentro</a>
-                        <a class="nav-link" href="./booking.html">Formulario de reserva</a>
-                        <a class="nav-link" href="#">Horarios</a>
+                        <a class="nav-link" href="./maps.html" data-en="Meeting Points">Puntos de encuentro</a>
+                        <a class="nav-link" href="./booking.html" data-en="Booking Form">Formulario de reserva</a>
+                        <a class="nav-link" href="./contact.html" data-en="Contact">Contacto</a>
                     </div>
                 </div>
             </div>
@@ -31,42 +34,43 @@
 
         <div class="container text-center mt-4 mb-5 image-background">
             <h1 class="text_tittle">AeroTaxi Tenerife</h1>
-            <h4 class="text_tittle">Rápido, cómodo y siempre a tiempo</h4>
+            <h4 class="text_tittle" data-en="Fast, Comfortable and Always on Time">Rápido, cómodo y siempre a tiempo</h4>
 
             <div class="card p-4 shadow-lg bg-light card-reservas">
                 <form>
                     <div class="row g-3">
                         <div class="col-md-2 text-start">
-                            <label for="origen">Origen</label>
+                            <label for="origen" data-en="Origin">Origen</label>
                             <select class="form-select" id="origen">
-                                <option selected disabled>Selecciona</option>
-                                <option value="norte">Aeropuerto Tenerife Norte</option>
-                                <option value="sur">Aeropuerto Tenerife Sur</option>
+                                <option selected disabled data-en="Select">Selecciona</option>
+                                <option value="norte" data-en="Tenerife North Airport">Aeropuerto Tenerife Norte</option>
+                                <option value="sur" data-en="Tenerife South Airport">Aeropuerto Tenerife Sur</option>
                             </select>
                         </div>
                         <div class="col-md-2 text-start">
-                            <label for="destino">Destino</label>
-                            <input type="text" class="form-control" id="destino" placeholder="Ciudad">
+                            <label for="destino" data-en="Destiny">Destino</label>
+                            <input type="text" class="form-control" id="destino" placeholder="Ciudad" data-en="City">
                         </div>
                         <div class="col-md-2 text-start">
-                            <label for="personas">Personas</label>
+                            <label for="personas" data-en="Passengers">Personas</label>
                             <input type="number" class="form-control" id="personas" min="1" value="1">
                         </div>
                         <div class="col-md-2 text-start">
-                            <label for="fecha">Fecha</label>
-                            <input type="date" class="form-control" id="fecha">
+                            <label for="fecha" data-en="Date">Fecha</label>
+                            <input type="date" class="form-control" id="fecha" data-en="Date">
                         </div>
                         <div class="col-md-2 text-start">
-                            <label for="hora">Hora</label>
-                            <input type="time" class="form-control" id="hora">
+                            <label for="hora" data-en="Time">Hora</label>
+                            <input type="time" class="form-control" id="hora" data-en="Time">
                         </div>
                         <div class="col-md-2">
-                            <button type="submit" class="btn btn-warning fw-bold mt-2">Reservar</button>
+                            <button type="submit" class="btn btn-warning fw-bold mt-2" data-en="Book Now">Reservar</button>
                         </div>
                     </div>
                 </form>
             </div>
         </div>
+        <script src="../js/languajes.js"></script>
     </body>
 
 </html>
