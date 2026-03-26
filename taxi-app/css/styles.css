@@ -75,3 +75,9 @@
     border-radius: 5px;
     text-decoration: none;
 }
+
+.carrousel-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
