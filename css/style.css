@@ -1,0 +1,416 @@
+/* ============================================================
+   TaxiTenerife – Custom styles
+   ============================================================ */
+
+/* ---- Root variables ---------------------------------------- */
+:root {
+  --primary:   #f5a623;   /* warm taxi yellow */
+  --primary-dark: #d4881a;
+  --secondary: #1a2744;   /* dark navy */
+  --light-bg:  #f8f9fa;
+  --text-muted: #6c757d;
+  --card-shadow: 0 4px 20px rgba(0,0,0,.10);
+  --radius: .75rem;
+}
+
+/* ---- Base --------------------------------------------------- */
+body {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--light-bg);
+  color: #212529;
+}
+
+/* ---- Navbar ------------------------------------------------- */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+
+.navbar-brand .brand-icon {
+  font-size: 1.6rem;
+  margin-right: .35rem;
+}
+
+/* ---- Hero / banner ----------------------------------------- */
+.hero {
+  background: linear-gradient(135deg, var(--secondary) 0%, #2c3e70 60%, #1a5276 100%);
+  color: #fff;
+  padding: 4rem 0 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600'%3E%3Ccircle cx='500' cy='100' r='300' fill='rgba(245,166,35,0.07)'/%3E%3Ccircle cx='50' cy='500' r='200' fill='rgba(245,166,35,0.05)'/%3E%3C/svg%3E") no-repeat center/cover;
+  pointer-events: none;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.hero p.lead {
+  opacity: .9;
+  font-size: 1.15rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: rgba(245,166,35,.18);
+  border: 1px solid rgba(245,166,35,.4);
+  color: var(--primary);
+  border-radius: 2rem;
+  padding: .4rem 1rem;
+  font-size: .85rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+/* ---- Booking card ------------------------------------------ */
+.booking-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem 2.5rem;
+}
+
+.booking-card .section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.booking-card .section-title::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary) 0%, transparent 100%);
+  border-radius: 1px;
+  margin-left: .5rem;
+}
+
+/* ---- Airport radio buttons --------------------------------- */
+.airport-option {
+  cursor: pointer;
+  border: 2px solid #dee2e6;
+  border-radius: var(--radius);
+  padding: 1rem;
+  transition: border-color .2s, background .2s, box-shadow .2s;
+}
+
+.airport-option:hover {
+  border-color: var(--primary);
+  background: #fffbf2;
+}
+
+.airport-option.selected {
+  border-color: var(--primary);
+  background: #fff8e8;
+  box-shadow: 0 0 0 3px rgba(245,166,35,.2);
+}
+
+.airport-option input[type="radio"] {
+  accent-color: var(--primary);
+}
+
+.airport-option .airport-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+.airport-option .airport-code {
+  font-size: .8rem;
+  color: var(--text-muted);
+  letter-spacing: .05em;
+}
+
+.airport-icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/* ---- Form controls ----------------------------------------- */
+.form-label {
+  font-weight: 600;
+  font-size: .9rem;
+  color: #344054;
+  margin-bottom: .4rem;
+}
+
+.form-control,
+.form-select {
+  border-radius: .5rem;
+  border: 1.5px solid #d0d5dd;
+  padding: .55rem .9rem;
+  font-size: .95rem;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(245,166,35,.2);
+}
+
+/* ---- Buttons ----------------------------------------------- */
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: .5rem;
+  padding: .65rem 1.5rem;
+  transition: background-color .2s, transform .1s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline-primary {
+  color: var(--primary);
+  border-color: var(--primary);
+  font-weight: 600;
+  border-radius: .5rem;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+/* ---- Fare summary card ------------------------------------- */
+.fare-card {
+  background: linear-gradient(135deg, var(--secondary) 0%, #2c3e70 100%);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  position: sticky;
+  top: 1.5rem;
+}
+
+.fare-card h5 {
+  font-size: 1rem;
+  opacity: .8;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.fare-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  font-size: .9rem;
+}
+
+.fare-row:last-child {
+  border-bottom: none;
+}
+
+.fare-row .label {
+  opacity: .8;
+}
+
+.fare-row .value {
+  font-weight: 700;
+}
+
+.fare-total {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid rgba(245,166,35,.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fare-total .label {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.fare-total .value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.fare-note {
+  margin-top: 1rem;
+  font-size: .78rem;
+  opacity: .65;
+  text-align: center;
+}
+
+/* ---- Features strip --------------------------------------- */
+.features-strip {
+  background: #fff;
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  padding: 1.5rem 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.feature-item .fi-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #fff8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.feature-item .fi-text strong {
+  display: block;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.feature-item .fi-text span {
+  font-size: .8rem;
+  color: var(--text-muted);
+}
+
+/* ---- Success step ----------------------------------------- */
+.success-icon {
+  width: 5rem;
+  height: 5rem;
+  background: #d4edda;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0 auto 1.5rem;
+}
+
+/* ---- Step indicator --------------------------------------- */
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 2rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+}
+
+.step-circle {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  background: #dee2e6;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: .9rem;
+  transition: background .3s, color .3s;
+}
+
+.step.active .step-circle {
+  background: var(--primary);
+  color: #fff;
+}
+
+.step.done .step-circle {
+  background: #198754;
+  color: #fff;
+}
+
+.step-label {
+  font-size: .72rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.step.active .step-label {
+  color: var(--primary-dark);
+}
+
+.step-connector {
+  flex: 1;
+  height: 2px;
+  background: #dee2e6;
+  min-width: 2rem;
+  margin: 0 .25rem;
+  margin-bottom: 1.4rem;
+  transition: background .3s;
+}
+
+.step-connector.done {
+  background: #198754;
+}
+
+/* ---- Footer ----------------------------------------------- */
+footer {
+  background: var(--secondary);
+  color: rgba(255,255,255,.75);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Responsive adjustments ------------------------------- */
+@media (max-width: 768px) {
+  .booking-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .hero {
+    padding: 2.5rem 0 2rem;
+  }
+
+  .fare-card {
+    position: static;
+    margin-top: 1.5rem;
+  }
+}

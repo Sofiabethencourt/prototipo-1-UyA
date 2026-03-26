@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaxiTenerife – Reserva tu taxi desde el aeropuerto</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link rel="stylesheet" href="vendor/bootstrap.min.css" />
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ======================================================
+       NAVBAR
+       ====================================================== -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #1a2744;">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <span class="brand-icon">🚕</span>
+        <span>TaxiTenerife</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#como-funciona">Cómo funciona</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+        <a href="#booking" class="btn btn-primary ms-lg-3">Reservar ahora</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======================================================
+       HERO
+       ====================================================== -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6">
+          <div class="hero-badge">
+            ✈️ &nbsp;Tenerife Norte &amp; Sur
+          </div>
+          <h1>Tu taxi del aeropuerto<br />a cualquier rincón de Tenerife</h1>
+          <p class="lead mt-3 mb-4">
+            Reserva con antelación, sin sorpresas en el precio.
+            Servicio disponible las 24 horas desde el
+            <strong>Aeropuerto Norte (TFN)</strong> y el
+            <strong>Aeropuerto Sur (TFS)</strong>.
+          </p>
+          <a href="#booking" class="btn btn-primary btn-lg px-4">
+            Hacer una reserva
+          </a>
+          <a href="#como-funciona" class="btn btn-outline-light btn-lg px-4 ms-2">
+            Cómo funciona
+          </a>
+        </div>
+        <div class="col-lg-6 text-center d-none d-lg-block" aria-hidden="true">
+          <div style="font-size:9rem; line-height:1; filter:drop-shadow(0 8px 24px rgba(0,0,0,.4));">
+            🚕
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FEATURES STRIP
+       ====================================================== -->
+  <section class="features-strip">
+    <div class="container">
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <div class="fi-icon">🕐</div>
+            <div class="fi-text">
+              <strong>Servicio 24 h</strong>
+              <span>Todos los días del año</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <div class="fi-icon">💳</div>
+            <div class="fi-text">
+              <strong>Precio fijo</strong>
+              <span>Sin sorpresas al llegar</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <div class="fi-icon">✅</div>
+            <div class="fi-text">
+              <strong>Confirmación inmediata</strong>
+              <span>Recibe tu código al instante</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="feature-item">
+            <div class="fi-icon">🧳</div>
+            <div class="fi-text">
+              <strong>Equipaje incluido</strong>
+              <span>Sin coste adicional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       HOW IT WORKS
+       ====================================================== -->
+  <section id="como-funciona" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5" style="color: #1a2744;">¿Cómo funciona?</h2>
+      <div class="row g-4 text-center">
+        <div class="col-md-4">
+          <div class="p-4">
+            <div style="font-size:3rem; margin-bottom:.75rem;">📋</div>
+            <h5 class="fw-bold">1. Rellena el formulario</h5>
+            <p class="text-muted">Elige tu aeropuerto, destino, fecha y hora de llegada y tus datos de contacto.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4">
+            <div style="font-size:3rem; margin-bottom:.75rem;">🔍</div>
+            <h5 class="fw-bold">2. Confirma el resumen</h5>
+            <p class="text-muted">Revisa los detalles de tu reserva y el precio estimado antes de confirmar.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4">
+            <div style="font-size:3rem; margin-bottom:.75rem;">🎉</div>
+            <h5 class="fw-bold">3. ¡Reserva confirmada!</h5>
+            <p class="text-muted">Recibirás un código de reserva único. El conductor te esperará en la terminal.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       BOOKING SECTION
+       ====================================================== -->
+  <section id="booking" class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-2" style="color: #1a2744;">Reserva tu taxi</h2>
+      <p class="text-center text-muted mb-5">Completa el formulario en 3 sencillos pasos</p>
+
+      <!-- Step indicator -->
+      <div class="step-indicator">
+        <div class="step active" id="step-1">
+          <div class="step-circle" id="step-circle-1">1</div>
+          <span class="step-label" id="step-label-1">Datos</span>
+        </div>
+        <div class="step-connector" id="connector-1-2"></div>
+        <div class="step" id="step-2">
+          <div class="step-circle" id="step-circle-2">2</div>
+          <span class="step-label" id="step-label-2">Confirmar</span>
+        </div>
+        <div class="step-connector" id="connector-2-3"></div>
+        <div class="step" id="step-3">
+          <div class="step-circle" id="step-circle-3">3</div>
+          <span class="step-label" id="step-label-3">¡Listo!</span>
+        </div>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- ---- Main booking area ---- -->
+        <div class="col-lg-8">
+
+          <!-- ================================================
+               STEP 1 – Booking form
+               ================================================ -->
+          <div id="step1-content">
+            <form id="booking-form" novalidate>
+              <div class="booking-card mb-4">
+
+                <!-- Airport selection -->
+                <p class="section-title">✈️ Aeropuerto de origen</p>
+                <div id="aeropuerto-error" class="alert alert-danger py-2 d-none" role="alert"></div>
+                <div class="row g-3 mb-2">
+                  <div class="col-sm-6">
+                    <label class="airport-option d-flex align-items-start gap-3 h-100">
+                      <input
+                        class="form-check-input mt-1 flex-shrink-0"
+                        type="radio"
+                        name="aeropuerto"
+                        id="aeropuerto-norte"
+                        value="norte"
+                      />
+                      <div>
+                        <div class="airport-icon">🛬</div>
+                        <div class="airport-name mt-1">Aeropuerto Norte</div>
+                        <div class="airport-code">Los Rodeos · TFN</div>
+                        <div class="text-muted mt-1" style="font-size:.8rem;">
+                          Vuelos nacionales e inter-islas
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="airport-option d-flex align-items-start gap-3 h-100">
+                      <input
+                        class="form-check-input mt-1 flex-shrink-0"
+                        type="radio"
+                        name="aeropuerto"
+                        id="aeropuerto-sur"
+                        value="sur"
+                      />
+                      <div>
+                        <div class="airport-icon">🛬</div>
+                        <div class="airport-name mt-1">Aeropuerto Sur</div>
+                        <div class="airport-code">Reina Sofía · TFS</div>
+                        <div class="text-muted mt-1" style="font-size:.8rem;">
+                          Vuelos internacionales y chárter
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="booking-card mb-4">
+                <!-- Destination & date/time -->
+                <p class="section-title">📍 Destino y fecha</p>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label" for="destino">Destino en Tenerife</label>
+                    <select class="form-select" id="destino" required>
+                      <!-- populated by JS -->
+                    </select>
+                    <div class="invalid-feedback">Por favor, selecciona un destino.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="fecha">Fecha de llegada</label>
+                    <input type="date" class="form-control" id="fecha" required />
+                    <div class="invalid-feedback">Por favor, indica la fecha.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="hora">Hora de llegada</label>
+                    <input type="time" class="form-control" id="hora" required />
+                    <div class="invalid-feedback">Por favor, indica la hora.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="pasajeros">Número de pasajeros</label>
+                    <select class="form-select" id="pasajeros">
+                      <option value="1">1 pasajero</option>
+                      <option value="2">2 pasajeros</option>
+                      <option value="3">3 pasajeros</option>
+                      <option value="4">4 pasajeros</option>
+                      <option value="5">5 pasajeros</option>
+                      <option value="6">6 pasajeros</option>
+                    </select>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="tipo-vehiculo">Tipo de vehículo</label>
+                    <select class="form-select" id="tipo-vehiculo">
+                      <option value="estandar">Estándar (hasta 4 pax)</option>
+                      <option value="minivan">Minivan (hasta 6 pax)</option>
+                      <option value="vip">VIP / Ejecutivo</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="booking-card mb-4">
+                <!-- Contact details -->
+                <p class="section-title">👤 Datos de contacto</p>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <label class="form-label" for="nombre">Nombre completo</label>
+                    <input type="text" class="form-control" id="nombre" placeholder="Ej. María García López" required />
+                    <div class="invalid-feedback">Introduce tu nombre completo.</div>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label" for="telefono">Teléfono de contacto</label>
+                    <input type="tel" class="form-control" id="telefono" placeholder="Ej. +34 600 000 000" required />
+                    <div class="invalid-feedback">Introduce un número de teléfono válido.</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="email">Correo electrónico</label>
+                    <input type="email" class="form-control" id="email" placeholder="Ej. maria@email.com" required />
+                    <div class="invalid-feedback">Introduce un correo electrónico válido.</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="notas">Notas adicionales <span class="text-muted fw-normal">(opcional)</span></label>
+                    <textarea class="form-control" id="notas" rows="3"
+                      placeholder="Ej. vuelo procedente de Madrid, necesito silla de bebé..."></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary btn-lg">
+                  Revisar reserva &rarr;
+                </button>
+              </div>
+            </form>
+          </div><!-- /step1-content -->
+
+          <!-- ================================================
+               STEP 2 – Summary / confirmation
+               ================================================ -->
+          <div id="step2-content" class="d-none">
+            <div class="booking-card">
+              <p class="section-title">🔍 Resumen de tu reserva</p>
+              <p class="text-muted mb-4">Revisa los datos antes de confirmar. Si necesitas cambiar algo, vuelve atrás.</p>
+
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <div class="bg-light rounded p-3">
+                    <div class="text-muted small mb-1">Aeropuerto de origen</div>
+                    <div class="fw-bold" id="summary-airport">—</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="bg-light rounded p-3">
+                    <div class="text-muted small mb-1">Destino</div>
+                    <div class="fw-bold" id="summary-dest">—</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="bg-light rounded p-3">
+                    <div class="text-muted small mb-1">Fecha de llegada</div>
+                    <div class="fw-bold" id="summary-date">—</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="bg-light rounded p-3">
+                    <div class="text-muted small mb-1">Hora de llegada</div>
+                    <div class="fw-bold" id="summary-time">—</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="bg-light rounded p-3">
+                    <div class="text-muted small mb-1">Pasajeros</div>
+                    <div class="fw-bold" id="summary-pax">—</div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="bg-light rounded p-3">
+                    <div class="text-muted small mb-1">Precio estimado</div>
+                    <div class="fw-bold fs-5" style="color: var(--primary);" id="summary-total">—</div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="my-4" />
+              <h6 class="fw-bold mb-3">Datos de contacto</h6>
+              <div class="row g-3">
+                <div class="col-sm-4">
+                  <div class="text-muted small">Nombre</div>
+                  <div class="fw-semibold" id="summary-name">—</div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="text-muted small">Teléfono</div>
+                  <div class="fw-semibold" id="summary-phone">—</div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="text-muted small">Email</div>
+                  <div class="fw-semibold" id="summary-email">—</div>
+                </div>
+                <div class="col-12">
+                  <div class="text-muted small">Notas</div>
+                  <div id="summary-notes">—</div>
+                </div>
+              </div>
+
+              <div class="d-flex gap-3 mt-4">
+                <button id="btn-back" type="button" class="btn btn-outline-secondary flex-fill">
+                  &larr; Modificar datos
+                </button>
+                <button id="btn-confirm" type="button" class="btn btn-primary flex-fill">
+                  Confirmar reserva ✓
+                </button>
+              </div>
+            </div>
+          </div><!-- /step2-content -->
+
+          <!-- ================================================
+               STEP 3 – Booking confirmed
+               ================================================ -->
+          <div id="step3-content" class="d-none">
+            <div class="booking-card text-center py-5">
+              <div class="success-icon">✅</div>
+              <h3 class="fw-bold mb-2" style="color: #198754;">¡Reserva confirmada!</h3>
+              <p class="text-muted mb-4">
+                Tu taxi estará esperándote en la terminal de llegadas.<br />
+                Guarda este código de reserva.
+              </p>
+              <div class="d-inline-block bg-light rounded-3 px-4 py-3 mb-4">
+                <div class="text-muted small mb-1">Código de reserva</div>
+                <div class="fw-bold fs-4 font-monospace" id="booking-code">TXN-—</div>
+              </div>
+              <p class="text-muted small mb-5">
+                Se ha enviado un correo de confirmación a la dirección indicada.<br />
+                Si tienes alguna duda llámanos al
+                <a href="tel:+34922000000" class="text-decoration-none fw-bold" style="color: #1a2744;">+34 922 000 000</a>.
+              </p>
+              <button id="btn-new-booking" type="button" class="btn btn-primary btn-lg px-5">
+                Nueva reserva
+              </button>
+            </div>
+          </div><!-- /step3-content -->
+
+        </div><!-- /col booking area -->
+
+        <!-- ---- Fare summary sidebar ---- -->
+        <div class="col-lg-4">
+          <div class="fare-card">
+            <h5>💶 Estimación de tarifa</h5>
+
+            <div class="fare-row">
+              <span class="label">Origen</span>
+              <span class="value" id="fare-origin">—</span>
+            </div>
+            <div class="fare-row">
+              <span class="label">Destino</span>
+              <span class="value" id="fare-dest">—</span>
+            </div>
+            <div class="fare-row">
+              <span class="label">Pasajeros</span>
+              <span class="value" id="fare-pax">1</span>
+            </div>
+            <div class="fare-row">
+              <span class="label">Tarifa base</span>
+              <span class="value" id="fare-base">—</span>
+            </div>
+            <div class="fare-row">
+              <span class="label">Recargo nocturno</span>
+              <span class="value" id="fare-night">—</span>
+            </div>
+            <div class="fare-row">
+              <span class="label">Suplemento pax</span>
+              <span class="value" id="fare-pax-fee">—</span>
+            </div>
+
+            <div class="fare-total">
+              <span class="label">Total estimado</span>
+              <span class="value" id="fare-total">—</span>
+            </div>
+
+            <p class="fare-note">
+              * Precio orientativo. El precio final puede variar por tráfico, equipaje extra o paradas adicionales.
+              Recargo nocturno aplicado entre 22:00 y 07:00.
+            </p>
+          </div>
+        </div><!-- /fare sidebar -->
+
+      </div><!-- /row -->
+    </div>
+  </section>
+
+  <!-- ======================================================
+       CONTACT SECTION
+       ====================================================== -->
+  <section id="contacto" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5" style="color: #1a2744;">¿Necesitas ayuda?</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4 text-center">
+          <div style="font-size:2.5rem; margin-bottom:.75rem;">📞</div>
+          <h6 class="fw-bold">Teléfono</h6>
+          <p class="text-muted mb-1">Lunes a domingo · 24 h</p>
+          <a href="tel:+34922000000" class="fw-bold text-decoration-none" style="color:#1a2744;">+34 922 000 000</a>
+        </div>
+        <div class="col-md-4 text-center">
+          <div style="font-size:2.5rem; margin-bottom:.75rem;">✉️</div>
+          <h6 class="fw-bold">Correo electrónico</h6>
+          <p class="text-muted mb-1">Respuesta en menos de 2 h</p>
+          <a href="mailto:info@taxitenerife.es" class="fw-bold text-decoration-none" style="color:#1a2744;">info@taxitenerife.es</a>
+        </div>
+        <div class="col-md-4 text-center">
+          <div style="font-size:2.5rem; margin-bottom:.75rem;">💬</div>
+          <h6 class="fw-bold">WhatsApp</h6>
+          <p class="text-muted mb-1">Respuesta rápida</p>
+          <a href="https://wa.me/34600000000" class="fw-bold text-decoration-none" style="color:#1a2744;">+34 600 000 000</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================
+       FOOTER
+       ====================================================== -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-center g-3">
+        <div class="col-md-4">
+          <span style="font-size:1.3rem; font-weight:700; color:#f5a623;">🚕 TaxiTenerife</span>
+        </div>
+        <div class="col-md-4 text-center">
+          <small>&copy; 2025 TaxiTenerife. Todos los derechos reservados.</small>
+        </div>
+        <div class="col-md-4 text-end">
+          <a href="#">Aviso legal</a> &nbsp;·&nbsp;
+          <a href="#">Privacidad</a> &nbsp;·&nbsp;
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="vendor/bootstrap.bundle.min.js"></script>
+
+  <!-- App JS -->
+  <script src="js/app.js"></script>
+</body>
+</html>
