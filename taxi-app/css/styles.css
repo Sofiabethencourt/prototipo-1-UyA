@@ -31,13 +31,22 @@
 
 /* Formulario de reservas */
 .container.my-5 {
-        background-color: white;
+        background-color: rgb(255, 255, 255);
         padding: 40px;
         border-radius: 15px;
         box-shadow: 0 4px 15px black;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
+}
+
+.was-validated .form-control:valid, 
+.was-validated .form-select:valid,
+.was-validated .form-control:valid:focus,
+.was-validated .form-select:valid:focus {
+    border-color: #dee2e6; 
+    background-image: none; /* quita el fondo ver y la imgen*/
+    box-shadow: none; /* quita eel borde de sombra */
 }
 
 /* Maps */
