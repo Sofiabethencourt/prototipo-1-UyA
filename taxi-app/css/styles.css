@@ -90,3 +90,44 @@
     height: 300px;
     object-fit: cover;
 }
+
+/* Lista de pasos para reservar */
+/* Destacar números de la lista */
+.steps-highlight {
+    counter-reset: step;
+}
+
+.steps-highlight .list-group-item {
+    position: relative;
+    padding-left: 3rem; 
+    font-size: 1rem; 
+    margin-top: 10px;
+    border-radius: 10px; 
+    border: 1px solid #dee2e6; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.steps-highlight .list-group-item::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;    
+    font-weight: bold;
+    color: rgb(255, 193, 7);     
+}
+
+/* Sección FAQ */
+/* Color del header del acordeón cuando está expandido */
+.accordion-button:not(.collapsed) {
+    background-color: #FFC107; 
+    color: #000; 
+}
+
+/* Color del header cuando está colapsado */
+.accordion-button.collapsed {
+    background-color: #f8f9fa; 
+    color: #000; 
+}
