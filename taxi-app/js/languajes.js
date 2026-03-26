@@ -8,14 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    document.querySelectorAll("[data-en]").forEach(el => {
-        if (el.tagName === "INPUT") {
-            el.placeholder = el.dataset.en;
-        } else {
-            el.textContent = el.dataset.en;
-        }
-    });
-
     // Botones
     const btnEs = document.getElementById("btn-es");
     const btnEn = document.getElementById("btn-en");
