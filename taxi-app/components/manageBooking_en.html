@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AeroTaxi Tenerife</title>
+        <link rel="icon" type="image/png" href="../images/logo.png">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    <body>
+
+        <!--NavBar-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow-sm">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+                    <img src="../images/logo.png" alt="Logo AeroTaxi Tenerife" width="40" height="40" class="me-2">
+                    AeroTaxi Tenerife
+                </a>
+
+                <a href="./manageBooking.html" id="btn-es" class="btn btn-outline-dark ms-2">ES</a>
+                <a href="./manageBooking_en.html" id="btn-en" class="btn btn-outline-dark ms-1">EN</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ms-auto"> <a class="nav-link active" aria-current="page" href="index_en.html">Inicio</a>
+                        <a class="nav-link" href="./maps_en.html">Meeting Points</a>
+                        <a class="nav-link" href="./booking_en.html">Booking Form</a>
+                        <a class="nav-link" href="./manageBooking.html" >Manage booking</a>
+                        <a class="nav-link" href="./contact_en.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <form id="bookingForm" class="container my-5" novalidate>
+            <h1 class="mb-4">Manage your booking</h1>
+            <p>Enter the following details to check your transfer status, modify schedules, or cancel the service.</p>           
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Booking number</label>
+                <input type="text" class="form-control" id="reservationNumber" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+            </div>
+
+            <button type="submit" class="btn btn-warning fw-bold px-5">Manage Booking</button>
+        </form>
+
+        <!--Simular resultado-->
+        <div class="d-flex justify-content-center align-items-center w-100 mt-4 mb-5">
+            <div class="card shadow-sm border" style="width: 25rem;">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold text-center mb-3">Booking: #TF-98765</h5>
+                    <p class="card-text">
+                        Transfer from <strong>Tenerife South Airport</strong> to <strong>Costa Adeje</strong>. 
+                        <br>
+                        <small class="text-muted">Date: 15/05/2026 - 18:30h</small>
+                    </p>
+                    <div class="d-grid gap-2">
+                        <a class="btn btn-outline-primary" href="#" role="button">
+                            <i class="bi bi-info-circle"></i> View Booking
+                        </a>
+                        
+                        <a class="btn btn-warning text-dark fw-bold" href="#" role="button">
+                            <i class="bi bi-pencil"></i> Modify Booking
+                        </a>
+                        
+                        <a class="btn btn-danger" href="#" role="button">
+                            <i class="bi bi-x-circle"></i> Cancel Booking
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    </body>
+
+</html>
