@@ -10,9 +10,13 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative; 
-    padding-top: 80px;
-    height: 400px; 
+    min-height: 500px; 
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .text_tittle {
@@ -22,12 +26,10 @@ body {
 
 /* Reservas en página principal*/
 .card-reservas {
-    position: absolute;
-    top: 50%;
-    left: 15%;
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
     border: 15px solid rgb(255, 193, 7);
+    margin: 0 auto;
 }
 
 .card-reservas label {
