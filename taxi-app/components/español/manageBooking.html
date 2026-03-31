@@ -2,10 +2,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Contacto-AeroTaxi Tenerife</title>
+        <title>Gestionar Reserva-AeroTaxi Tenerife</title>
         <link rel="icon" type="image/png" href="../images/logo.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../../css/styles.css">
     </head>
     <body>
 
@@ -13,12 +13,12 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-                    <img src="../images/logo.png" alt="Logo AeroTaxi Tenerife" width="40" height="40" class="me-2">
+                    <img src="../../images/logo.png" alt="Logo AeroTaxi Tenerife" width="40" height="40" class="me-2">
                     AeroTaxi Tenerife
                 </a>
 
-                <a href="./contact.html" id="btn-es" class="btn btn-dark ms-2">ES</a>
-                <a href="./contact_en.html" id="btn-en" class="btn btn-outline-dark ms-1">EN</a>
+                <a href="./manageBooking.html" id="btn-es" class="btn btn-dark ms-2">ES</a>
+                <a href="../ingles/manageBooking_en.html" id="btn-en" class="btn btn-outline-dark ms-1">EN</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -34,63 +34,27 @@
             </div>
         </nav>
 
-        <!--Mensaje de exito-->
-        <div id="successMessage" class="container mt-3 alert alert-success d-none w-100" role="alert">
-            <span id="successText"></span>
-        </div>
-
-        <!--Formulario de contacto-->
-        <form id="contactForm" class="container my-5">
-            <h1 class="mb-4"> Contacta con nosotros</h1>
-            <p>Si tienes alguna duda, no dudes en contactarnos por correo electrónico <a href="https://mail.google.com/mail/?view=cm&to=atencioncliente@aerotaxi.com">atencioncliente@aerotaxi.com</a> o completa nuestro formulario, nuestro equipo te contestará lo antes posible.</p>
-            <div class="row g-3 mb-3">
-                <div class="col">
-                    <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="col">
-                    <label for="exampleFormControlInput1" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" id="lastname" required>
-                </div>
+        <form id="bookingForm" class="container my-5">
+            <h1 class="mb-4"> Gestiona tu reserva</h1>
+            <p>Introduce los siguientes datos para consultar el estado de tu traslado, modificar horarios o cancelar el servicio.</p>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Número de reserva</label>
+                <input type="text" class="form-control" id="reservationNumber" placeholder="Ej: TF-#####" required>
             </div>
 
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Correo electrónico</label>
                 <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
             </div>
-
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Motivo de Contacto</label>
-                <select class="form-select form-select mb-3" aria-label="select example" id="motive" required>
-                    <option value="" selected disabled>Seleccionar</option>
-                    <option value="comercial">Información comercial</option>
-                    <option value="corregir">Corregir datos</option>
-                    <option value="baja">Dar de baja datos</option>
-                    <option value="otra">Otro</option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="message" rows="3"></textarea>
-            </div>
-
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="checkPrivacy" required>
-                <label class="form-check-label" for="exampleCheck1">He leído y acepto la política de privacidad</label>
-            </div>
-
-            <button type="submit" class="btn btn-warning fw-bold px-5">Enviar Mensaje</button>
-        </form>
-
-        <!--Pie de página-->
+            <a type="submit" href="./manageBookingResult.html" class="btn btn-warning fw-bold px-5" >Gestionar</a>
+        </form>    
 
         <footer class="bg-dark text-light py-3 mt-4">
             <div class="container">
                 <div class="row align-items-center"> 
                     <div class="col-md-4 mb-2 mb-md-0">
                         <a class="navbar-brand d-flex align-items-center fw-bold text-warning fs-6" href="#">
-                            <img src="../images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                            <img src="../../images/logo.png" alt="Logo" width="25" height="25" class="me-2">
                             AeroTaxi Tenerife
                         </a>
                         <p class="x-small text-secondary mb-0" style="font-size: 0.75rem;">
@@ -122,16 +86,10 @@
             </div>
         </footer>
 
-    
-        <script src="../js/languajes.js"></script>
-        <script src="../js/contact.js"></script>
-        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        <!--Para iconos-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     </body>
 
 </html>

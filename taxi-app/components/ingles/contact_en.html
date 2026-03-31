@@ -1,11 +1,11 @@
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Manage Booking Result-AeroTaxi Tenerife</title>
+        <title>Contact-AeroTaxi Tenerife</title>
         <link rel="icon" type="image/png" href="../images/logo.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../../css/styles.css">
     </head>
     <body>
 
@@ -13,41 +13,74 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-warning shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-                    <img src="../images/logo.png" alt="Logo AeroTaxi Tenerife" width="40" height="40" class="me-2">
+                    <img src="../../images/logo.png" alt="Logo AeroTaxi Tenerife" width="40" height="40" class="me-2">
                     AeroTaxi Tenerife
                 </a>
 
-                <a href="./manageBooking.html" id="btn-es" class="btn btn-outline-dark ms-2">ES</a>
-                <a href="./manageBooking_en.html" id="btn-en" class="btn btn-dark ms-1">EN</a>
+                <a href="../español/contact.html" id="btn-es" class="btn btn-outline-dark ms-2">ES</a>
+                <a href="./contact_en.html" id="btn-en" class="btn btn-dark ms-1">EN</a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto"> <a class="nav-link active" aria-current="page" href="index_en.html">Home</a>
+                    <div class="navbar-nav ms-auto"> <a class="nav-link active" aria-current="page" href="./index_en.html">Home</a>
                         <a class="nav-link" href="./maps_en.html">Meeting Points</a>
                         <a class="nav-link" href="./booking_en.html">Booking Form</a>
-                        <a class="nav-link" href="./manageBooking_en.html" >Manage booking</a>
+                        <a class="nav-link" href="./manageBooking_en.html" >Manage Booking</a>
                         <a class="nav-link" href="./contact_en.html">Contact</a>
                     </div>
                 </div>
             </div>
         </nav>
 
-        <form id="bookingForm" class="container my-5" novalidate>
-            <h1 class="mb-4">Manage your booking</h1>
-            <p>Enter the following details to check your transfer status, modify schedules, or cancel the service.</p>           
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Booking number</label>
-                <input type="text" class="form-control" id="reservationNumber" placeholder="Ex: TF-#####" required>
+        <!--Mensaje de exito-->
+        <div id="successMessage" class="container mt-3 alert alert-success d-none w-100" role="alert">
+            <span id="successText"></span>
+        </div>
+
+        <!--Formulario de contacto-->
+        <form id="contactForm" class="container my-5">
+            <h1 class="mb-4"> Contact Us</h1>
+            <p>If you have any questions, please feel free to contact us via email at <a href="https://mail.google.com/mail/?view=cm&to=atencioncliente@aerotaxi.com">atencioncliente@aerotaxi.com</a> or fill out our form; our team will get back to you as soon as possible.</p>
+            <div class="row g-3 mb-3">
+                <div class="col">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="col">
+                    <label for="exampleFormControlInput1" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="lastname" required>
+                </div>
             </div>
 
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email Address</label>
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
             </div>
 
-            <a type="submit" href="./manageBookingResult_en.html" class="btn btn-warning fw-bold px-5">Manage Booking</a>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Reason for Contact</label>
+                <select class="form-select form-select mb-3" aria-label="select example" id="motive" required>
+                    <option value="" selected disabled>Select an option</option>
+                    <option value="comercial">Commercial Information</option>
+                    <option value="corregir">Correct Data</option>
+                    <option value="baja">Unsubscribe / Delete Data</option>
+                    <option value="otra">Other information</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+            </div>
+
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="checkPrivacy" required>
+                <label class="form-check-label" for="exampleCheck1">I have read and accept the privacy policy</label>
+            </div>
+
+            <button type="submit" class="btn btn-warning fw-bold px-5">Send Message</button>
         </form>
 
         <!--Pie de página-->
@@ -56,7 +89,7 @@
                 <div class="row align-items-center"> 
                     <div class="col-md-4 mb-2 mb-md-0">
                         <a class="navbar-brand d-flex align-items-center fw-bold text-warning fs-6" href="#">
-                            <img src="../images/logo.png" alt="Logo" width="25" height="25" class="me-2">
+                            <img src="../../images/logo.png" alt="Logo" width="25" height="25" class="me-2">
                             AeroTaxi Tenerife
                         </a>
                         <p class="x-small text-secondary mb-0" style="font-size: 0.75rem;">
@@ -87,6 +120,10 @@
                 </div>
             </div>
         </footer>
+
+    
+        <script src="../js/languajes.js"></script>
+        <script src="../js/contact.js"></script>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
