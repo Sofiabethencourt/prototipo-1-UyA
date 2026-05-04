@@ -6,7 +6,7 @@ body {
 
 /* Index */
 .image-background {
-    background-image: url('../images/back_tittle.jpg'); 
+    background-image: url('../images/medano.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@ body {
 .card-reservas {
     width: 100%;
     max-width: 1000px;
-    border: 15px solid rgb(255, 193, 7);
+    border: 15px solid #4a90d9;
     margin: 0 auto;
 }
 
@@ -85,7 +85,7 @@ body {
 
 .map-btn {
     display: inline-block;
-    background-color: rgb(255, 193, 7); 
+    background-color: #ffc107; 
     color: black;
     font-weight: 600;
     padding: 0.35rem 0.75rem;
@@ -124,13 +124,13 @@ body {
     transform: translateY(-50%);
     font-size: 2rem;    
     font-weight: bold;
-    color: rgb(255, 193, 7);     
+    color: #4a90d9;     
 }
 
 /* Sección FAQ */
 /* Color del header del acordeón cuando está expandido */
 .accordion-button:not(.collapsed) {
-    background-color: #FFC107; 
+    background-color: #4a90d9; 
     color: #000; 
 }
 
@@ -147,7 +147,7 @@ body {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background-color: rgb(255, 193, 7);
+  background-color: #4a90d9;
   font-weight: bold;
   font-size: 0.85rem;
   margin-right: 0.5rem;
@@ -189,4 +189,8 @@ user-select: none;
 .card-ticket:hover {
     transform: translateY(-8px); 
     box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important; 
+}
+
+.navbar .nav-link {
+    font-weight: bold;
 }
